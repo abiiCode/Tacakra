@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+
+body {
+    background-color: #FFD102;
+}
+
+.card {
+    background-color: #1A1A1A;
+    color: aliceblue;
+}
+
+.card-title {
+    color: #FFD102;
+    font-family: 'Lobster', cursive;
+}
+
+input[type='text']::placeholder,[type='email']::placeholder, [type='password']::placeholder{
+    color: #ffffff;
+    font-size: small;
+}
+
+input[type='text'], [type='email'], [type='password']{
+    background-color: #1A1A1A;
+    border: 2px solid #FFD102;
+    color: #ffffff;
+}
+
+input[type='text']:focus, [type='email']:focus, [type='password']:focus{
+    background-color: #1A1A1A;
+    border: 2px solid #FFD102;
+    color: #ffffff;
+}
+
+.btn-submit {
+    padding: 10px;
+    background-color: #FFD102;
+    color: #1A1A1A;
+    font-weight: bold;
+    border: 0;
+}
+
+.btn-submit:hover{
+    background-color: #d1ac07;
+}
+
+.btn-google {
+    padding: 10px;
+    background-color: #db1616;
+    border: 0px;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+.btn-google:hover{
+    background-color: #cf2121;
+}
+
+hr{
+    color: #FFD102;
+    opacity: 1;
+}
+
+.credits{
+    color: #1A1A1A;
+    font-family: 'Lobster', cursive;
+}
