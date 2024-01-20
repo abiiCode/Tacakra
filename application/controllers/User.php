@@ -12,16 +12,18 @@ class User extends CI_Controller
         parent::__construct();
         $this->load->helper(array('form', 'url'));
         $this->load->library(array('form_validation'));
-        cek_login();
+        cek_login(); // Memastikan bahwa pengguna telah login
     }
 
     function index()
     {
+        // Mendapatkan nomor KK dari session
         $no_kk = $this->session->userdata('no_kk');
+        // Query untuk mendapatkan data transaksi yang sedang diproses untuk pengguna dengan nomor KK tertentu
         $query = "SELECT * FROM transaksi
         JOIN user ON user.id = transaksi.id_user
         WHERE transaksi.status = 'Diproses' AND user.no_kk = " . $no_kk;
-
+        // Data yang akan dikirimkan ke tampilan
         $data = [
             'title' => "",
             'topbar' => $this->ModelUser->cekUser(['no_kk' => $no_kk])->row_array(),
@@ -31,13 +33,14 @@ class User extends CI_Controller
             'jml_ptransaksi' => $this->db->query($query)->num_rows(),
 
         ];
+        // Memuat tampilan
         $this->load->view('templates/user_header', $data);
         $this->load->view('user/topbar', $data);
         $this->load->view('user/sidebar', $data);
         $this->load->view('user/index', $data);
         $this->load->view('templates/user_footer', $data);
     }
-
+    // Fungsi untuk menangani setoran
     public function setoran($id)
     {
         $this->form_validation->set_rules('nominal', 'nominal', 'required', [
@@ -48,6 +51,7 @@ class User extends CI_Controller
         ]);
 
         if ($this->form_validation->run() == false) {
+            // Jika validasi gagal, tampilkan halaman setoran
             $no_kk = $this->session->userdata('no_kk');
             $data = [
                 'topbar' => $this->ModelUser->cekUser(['no_kk' => $no_kk])->row_array(),
@@ -62,6 +66,7 @@ class User extends CI_Controller
             $this->load->view('user/setoran', $data);
             $this->load->view('templates/user_footer');
         } else {
+            // Jika validasi berhasil, proses setoran
             $id_user = $this->input->post('id_user');
             $id_tabungan = $this->input->post('id_tabungan');
             $jenis_transaksi = 'Setoran';
@@ -127,6 +132,7 @@ class User extends CI_Controller
     }
 
     public function penarikan($id)
+     // Fungsi untuk menangani penarikan
     {
         $this->form_validation->set_rules('nominal', 'nominal', 'required', [
             'required' => 'Masukan Nominal.'
@@ -196,7 +202,7 @@ class User extends CI_Controller
             }
         };
     }
-
+     // Fungsi untuk menampilkan riwayat transaksi
     function riwayat($id)
     {
         $no_kk = $this->session->userdata('no_kk');
@@ -231,7 +237,7 @@ class User extends CI_Controller
         $this->load->view('user/riwayat', $data);
         $this->load->view('templates/user_footer', $data);
     }
-
+    // Fungsi untuk menampilkan detail riwayat transaksi
     public function detailRiwayat($id_transaksi)
     {
         $no_kk = $this->session->userdata('no_kk');
@@ -256,7 +262,7 @@ class User extends CI_Controller
         $this->load->view('user/detail_riwayat', $data);
         $this->load->view('templates/user_footer', $data);
     }
-
+     // Fungsi untuk mencetak riwayat transaksi dalam format PDF atau Excel
     public function print_t_diproses($id)
     {
         $no_kk = $this->session->userdata('no_kk');
@@ -407,7 +413,7 @@ class User extends CI_Controller
         ];
         $this->load->view('user/excel_transaksi', $data);
     }
-
+    // Fungsi untuk mengelola profil pengguna
     public function profile()
     {
 
@@ -456,7 +462,7 @@ class User extends CI_Controller
             redirect('user/profile');
         }
     }
-
+      // Fungsi untuk mengganti password
     public function ganti_password()
     {
         $password_lama1 = $this->input->post('password_lama1');

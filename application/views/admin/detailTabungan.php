@@ -1,43 +1,50 @@
 <main id="main" class="main">
 
+    <!-- Bagian Judul Halaman -->
     <div class="pagetitle">
         <h1><?= $title; ?></h1>
     </div><!-- End Page Title -->
 
+    <!-- Bagian Konten Utama -->
     <section class="section dashboard">
         <div class="row">
+            <!-- Bagian Profile Warga -->
             <section class="section profile">
                 <div class="row">
+                    <!-- Pesan Flash Data -->
                     <?= $this->session->flashdata('pesan'); ?>
+                    <!-- Kolom Profil Pengguna -->
                     <div class="col-xl-4">
 
                         <div class="card">
                             <div class="card-body profile-card pt-4 d-flex flex-column align-items-center">
-
+                                <!-- Gambar Profil -->
                                 <img src="<?= base_url('assets/img/user_profile/' . $user['image']); ?>" alt="Profile" class="rounded-circle">
+                                <!-- Nama dan Nomor KK Pengguna -->
                                 <h2><?= $user['nama']; ?></h2>
                                 <h3><?= $user['no_kk']; ?></h3>
                             </div>
                         </div>
 
                     </div>
-
+                    <!-- Kolom Informasi Profile -->
                     <div class="col-xl-8">
 
                         <div class="card">
                             <div class="card-body pt-3">
-                                <!-- Bordered Tabs -->
+                                <!-- Bordered Tabs (Tab Navigasi ) -->
                                 <ul class="nav nav-tabs nav-tabs-bordered">
                                     <li class="nav-item">
                                         <button class="nav-link active" data-bs-toggle="tab" data-bs-target="#profile-overview">Overview</button>
                                     </li>
                                 </ul>
+                                <!-- Konten Tab -->
                                 <div class="tab-content pt-2">
 
                                     <div class="tab-pane fade show active profile-overview" id="profile-overview">
 
                                         <h5 class="card-title">Profile</h5>
-
+                                        <!-- Informasi Detail Profile -->
                                         <div class="row">
                                             <div class="col-lg-3 col-md-4 label ">Nama Lengkap</div>
                                             <div class="col-lg-9 col-md-8"><?= $user['nama']; ?></div>
@@ -73,8 +80,10 @@
 
                     </div>
                 </div>
-            </section>
+            </section><!-- End Bagian Profile Warga -->
+
             <!-- Warga Card -->
+            <!-- Kartu Informasi Saldo -->
             <div class="col-xxl-4 col-md-4">
                 <div class="card info-card sales-card">
                     <div class="card-body">
@@ -90,7 +99,8 @@
                         </div>
                     </div>
                 </div>
-            </div><!-- End Warga Card -->
+            </div> <!-- End Kartu Informasi Saldo -->
+
             <!-- saldo masuk Card -->
             <div class="col-xxl-4 col-md-4">
                 <div class="card info-card revenue-card">
@@ -113,6 +123,7 @@
                     </div>
                 </div>
             </div><!-- End saldo masuk Card -->
+
             <!-- saldo keluar Card -->
             <div class="col-xxl-4 col-md-4">
                 <div class="card info-card customers-card">
@@ -136,14 +147,15 @@
                 </div>
             </div><!-- End saldo keluar Card -->
 
-            <!-- Left side columns -->
+              <!-- Kolom Transaksi Warga -->
             <div class="col-lg-12">
                 <div class="row">
-                    <!-- data warga -->
+                     <!-- Tabel Data Transaksi -->
                     <div class="col-12">
                         <div class="card recent-sales overflow-auto">
                             <div class="card-body">
                                 <h5 class="card-title">Transaksi</h5>
+                                <!-- Tabel Data Transaksi -->
                                 <!-- <div class="row">
                                     <div class="col d-flex flex-row gap-2 mb-2">
                                         <a href="<?= base_url('admin/print_data_tabungan'); ?>" target="_blank" type="button" class="btn btn-sm btn-outline-primary"><i class="fs-5 bi bi-printer"></i> PRINT</a>
@@ -183,9 +195,9 @@
                         </div>
                     </div><!-- End User -->
                 </div>
-            </div><!-- End Left side columns -->
+            </div><!-- End Kolom Transaksi Warga -->
 
         </div>
-    </section>
+    </section><!-- End Bagian Konten Utama -->
 
 </main><!-- End #main -->

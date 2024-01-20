@@ -1,4 +1,5 @@
 <style>
+    /* Gaya CSS untuk elemen dengan kelas 'bukti' */
     .bukti {
         width: 90px;
         height: 120px;

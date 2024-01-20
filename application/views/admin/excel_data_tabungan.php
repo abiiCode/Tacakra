@@ -1,4 +1,5 @@
 <?php
+// Set header untuk membuat file Excel
 header("Content-type: application/vnd-ms-excel");
 header("Content-Disposition: attachment; filename=" . $filename . ".xls");
 header("Pragma: no-cache");
@@ -33,6 +34,7 @@ header("Expires: 0");
     <center>Laporan Data Tabungan Warga</center>
 </h3>
 <br />
+<!-- Tabel Data -->
 <table class="table-data">
     <thead>
         <tr>

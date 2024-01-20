@@ -28,6 +28,7 @@
                                         <label for="floatingName">ID Transaksi</label>
                                     </div>
                                 </div>
+                                <!-- Input Nama -->
                                 <div class="col-md-6 g-1">
                                     <div class="form-floating">
                                         <input type="text" class="form-control" id="floatingName" placeholder="Nama" value="<?= $warga['nama']; ?>" disabled>
@@ -35,6 +36,7 @@
                                     </div>
                                 </div>
                             </div>
+                            <!-- Input No Telepon dan Jenis Transaksi -->
                             <div class="row mt-2">
                                 <div class="col-md-6 g-1">
                                     <div class="form-floating">
@@ -49,6 +51,7 @@
                                     </div>
                                 </div>
                             </div>
+                             <!-- Input Nominal dan Catatan -->
                             <div class="row mt-2">
                                 <div class="col-md-6 g-1">
                                     <div class="form-floating">
@@ -63,6 +66,7 @@
                                     </div>
                                 </div>
                             </div>
+                            <!-- Input Metode Pembayaran dan Tanggal -->
                             <div class="row mt-2">
                                 <div class="col-md-6 g-1">
                                     <div class="form-floating">
@@ -77,6 +81,7 @@
                                     </div>
                                 </div>
                             </div>
+                             <!-- Tampilkan Bukti Transfer -->
                             <div class="row mt-2">
                                 <div class="col-md-6 g-1 ms-1">
                                     <label class="col-sm-4">Bukti Transfer</label>
@@ -87,7 +92,9 @@
                                     </div>
                                 </div>
                             </div>
+                             <!-- Form untuk mengonfirmasi setoran -->
                             <form method="POST" enctype="multipart/form-data" action="<?= base_url('admin/terimaSetoran/' . $transaksi['id_transaksi']); ?>">
+                            <!-- Input hidden untuk data transaksi -->
                                 <input type="hidden" name="id_transaksi" value="<?= $transaksi['id_transaksi']; ?>">
                                 <input type="hidden" name="id_user" value="<?= $transaksi['id_user']; ?>">
                                 <input type="hidden" name="jenis_transaksi" value="<?= $transaksi['jenis_transaksi']; ?>">
@@ -99,11 +106,14 @@
                                 <input type="hidden" name="tanggal" value="<?= $transaksi['tanggal']; ?>">
                                 <input type="hidden" name="no_kk" value="<?= $tabungan['no_kk']; ?>">
                                 <input type="hidden" name="saldo" value="<?= $tabungan['saldo']; ?>">
+                                <!-- Tombol Terima -->
                                 <div class="text-center mb-1 mt-3">
                                     <button type="submit" class="btn btn-success"><i class="bi bi-check-lg me-1"></i>Terima</button>
                                 </div>
                             </form>
+                            <!-- Form untuk menolak setoran -->
                             <form method="POST" enctype="multipart/form-data" action="<?= base_url('admin/tolakSetoran/' . $transaksi['id_transaksi']); ?>">
+                            <!-- Input hidden untuk data transaksi -->
                                 <input type="hidden" name="id_transaksi" value="<?= $transaksi['id_transaksi']; ?>">
                                 <input type="hidden" name="id_user" value="<?= $transaksi['id_user']; ?>">
                                 <input type="hidden" name="jenis_transaksi" value="<?= $transaksi['jenis_transaksi']; ?>">
@@ -113,6 +123,7 @@
                                 <input type="hidden" name="id_tabungan" value="<?= $transaksi['id_tabungan']; ?>">
                                 <input type="hidden" name="bukti" value="<?= $transaksi['bukti']; ?>">
                                 <input type="hidden" name="tanggal" value="<?= $transaksi['tanggal']; ?>">
+                                <!-- Tombol Tolak -->
                                 <div class="text-center mb-4 mt-1">
                                     <button type="submit" class="btn btn-danger"><i class="bi bi-x-lg me-1"></i>Tolak</button>
                                 </div>

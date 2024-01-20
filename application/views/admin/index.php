@@ -1,9 +1,10 @@
 <main id="main" class="main">
-
+    <!-- Page Title -->
     <div class="pagetitle">
         <h1><?= $title; ?></h1>
     </div><!-- End Page Title -->
 
+    <!-- Dashboard Section -->
     <section class="section dashboard">
         <div class="row">
 
@@ -13,6 +14,7 @@
 
                     <!-- Warga Card -->
                     <div class="col-xxl-4 col-md-6">
+                        <!-- Informasi jumlah kepala keluarga -->
                         <div class="card info-card sales-card">
                             <div class="card-body">
                                 <h5 class="card-title">Kepala Keluarga</h5>
@@ -28,8 +30,10 @@
                             </div>
                         </div>
                     </div><!-- End warga Card -->
+
                     <!-- Proses Card -->
                     <div class="col-xxl-4 col-md-6">
+                        <!-- Informasi jumlah transaksi yang sedang diproses -->
                         <div class="card info-card sales-card">
                             <div class="card-body">
                                 <h5 class="card-title">Permintaan</h5>
@@ -45,8 +49,10 @@
                             </div>
                         </div>
                     </div><!-- End Proses Card -->
+
                     <!-- Laporan Card -->
                     <div class="col-xxl-4 col-md-4">
+                         <!-- Tombol untuk mencetak, membuat PDF, dan membuat Excel laporan transaksi yang diproses -->
                         <div class="card info-card sales-card">
                             <div class="card-body mx-auto">
                                 <h5 class="card-title">Laporan Transaksi <span class="badge bg-primary text-light">Diproses</span></h5>
@@ -60,8 +66,10 @@
                             </div>
                         </div>
                     </div><!-- End Laporan Card -->
+
                     <!-- Laporan Card -->
                     <div class="col-xxl-4 col-md-4">
+                         <!-- Tombol untuk mencetak, membuat PDF, dan membuat Excel laporan transaksi yang diterima -->
                         <div class="card info-card sales-card">
                             <div class="card-body mx-auto">
                                 <h5 class="card-title">Laporan Transaksi <span class="badge bg-success text-light">Diterima</span></h5>
@@ -75,8 +83,10 @@
                             </div>
                         </div>
                     </div><!-- End Laporan Card -->
+
                     <!-- Laporan Card -->
                     <div class="col-xxl-4 col-md-4">
+                        <!-- Tombol untuk mencetak, membuat PDF, dan membuat Excel laporan transaksi yang ditolak -->
                         <div class="card info-card sales-card">
                             <div class="card-body mx-auto">
                                 <h5 class="card-title">Laporan Transaksi <span class="badge bg-danger text-light">Ditolak</span></h5>
@@ -93,6 +103,7 @@
 
                     <!-- User -->
                     <div class="col-12">
+                        <!-- Tabel data warga -->
                         <div class="card recent-sales overflow-auto">
                             <div class="card-body">
                                 <h5 class="card-title">Data Warga Rt.003/Rw.005</h5>

@@ -6,6 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><?= $title; ?></title>
+
+    <!-- Styles -->
     <style>
         body {
             margin: 0;
@@ -34,6 +36,7 @@
 </head>
 
 <body>
+     <!-- Page Header -->
     <h3>
         <center>Laporan Data Tabungan Warga Rt.003/Rw.005</center>
     </h3>
@@ -52,6 +55,7 @@
         <tbody>
             <?php $i = 1; ?>
             <?php foreach ($tabungan as $tab) : ?>
+                <!-- Data Rows -->
                 <tr>
                     <th scope="row"><?= $i++; ?></a></th>
                     <td><?= $tab['no_kk']; ?></td>

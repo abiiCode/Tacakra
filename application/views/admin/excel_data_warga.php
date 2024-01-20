@@ -1,4 +1,5 @@
 <?php
+// Setting header untuk file Excel
 header("Content-type: application/vnd-ms-excel");
 header("Content-Disposition: attachment; filename=" . $filename . ".xls");
 header("Pragma: no-cache");
@@ -48,6 +49,7 @@ header("Expires: 0");
     <tbody>
         <?php
         $no = 1;
+        // Looping untuk setiap data warga
         foreach ($warga as $w) {
         ?>
             <tr>

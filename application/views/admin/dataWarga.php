@@ -9,6 +9,7 @@
 
             <!-- Left side columns -->
             <div class="col-lg-11">
+                <!-- Tombol Tambah Warga -->
                 <a href="<?= base_url('admin/tambahWarga'); ?>" class="btn btn-primary fw-bold text-light mb-2"><i class="bi bi-plus-circle me-1"></i>Tambah</a>
                 <?= $this->session->flashdata('pesan'); ?>
                 <div class="row">
@@ -18,6 +19,7 @@
                             <div class="card-body">
                                 <h5 class="card-title">Warga</h5>
                                 <div class="row">
+                                    <!-- Tombol Print, PDF, Excel -->
                                     <div class="col d-flex flex-row gap-2 mb-2">
                                         <a href="<?= base_url('admin/print_data_warga'); ?>" target="_blank" type="button" class="btn btn-sm btn-outline-primary"><i class="fs-5 bi bi-printer"></i> PRINT</a>
                                         <a href="<?= base_url('admin/pdf_data_warga'); ?>" target="_blank" type="button" class="btn btn-sm btn-outline-danger"><i class="fs-5 bi bi-file-earmark-pdf"></i> PDF</a>
