@@ -2,9 +2,11 @@
 <html lang="en">
 
 <head>
+  <!-- Pengaturan karakter dan tampilan responsif -->
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
+  <!-- Judul halaman yang dinamis sesuai dengan variabel $title -->
   <title><?= $title; ?> TA - CAKRA </title>
   <meta content="TA - CAKRA" name="description">
   <meta content="TA - CAKRA" name="keywords">
@@ -13,7 +15,7 @@
   <link href="<?= base_url('assets/'); ?>img/tacakra3.png" rel="icon">
   <link href="<?= base_url('assets/'); ?>img/tacakra3.png" rel="img/tacakra3.png">
 
-  <!-- Google Fonts -->
+  <!-- Google Fonts (penggunaan font) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Josefin+Sans&family=Lobster&display=swap" rel="stylesheet">

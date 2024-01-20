@@ -1,6 +1,7 @@
 <!-- ======= Sidebar ======= -->
 <aside id="sidebar" class="sidebar">
 
+    <!-- Sidebar Navigation List -->
     <ul class="sidebar-nav" id="sidebar-nav">
 
         <li class="nav-item">
@@ -9,6 +10,8 @@
                 <span>Dashboard</span>
             </a>
         </li>
+
+        <!-- Data Warga Section -->
         <li class="nav-heading">Data Warga</li>
         <li class="nav-item">
             <a class="nav-link collapsed" href="<?= base_url('admin/dataWarga'); ?>">
@@ -17,6 +20,7 @@
             </a>
         </li>
 
+        <!-- Data Transaksi Section -->
         <li class="nav-heading">Data Transaksi</li>
         <li class="nav-item">
             <a class="nav-link collapsed" href="<?= base_url('admin/dataTransaksi'); ?>">
@@ -25,6 +29,7 @@
             </a>
         </li>
 
+        <!-- Data Tabungan Section -->
         <li class="nav-heading">Data Tabungan</li>
         <li class="nav-item">
             <a class="nav-link collapsed" href="<?= base_url('admin/dataTabungan'); ?>">

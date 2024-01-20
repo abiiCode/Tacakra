@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><?= $title; ?></title>
+     <!-- Gaya CSS untuk Mendesain Tampilan Laporan -->
     <style>
         body {
             margin: 0;
@@ -83,16 +84,21 @@
 </head>
 
 <body>
+    <!-- Bagian Utama Laporan -->
     <div class="frame">
         <h3 class="judul">Tabungan & Simpanan Wajib</h3>
         <br>
         <h5 class="alamat">Ds. Munjungagung Dk. Karangjati Rt.003/Rw.005 Kec.Kramat, Kab.Tegal, Jawa Tengah</h5>
         <hr class="hr1">
         <hr class="hr2">
+        
+         <!-- Judul Laporan -->
         <h3>
             <center>Laporan Data Transaksi TA-CAKRA 03/05</center>
         </h3>
         <br />
+
+        <!-- Tabel Data Transaksi -->
         <table class="table-data">
             <thead>
                 <tr>
@@ -111,6 +117,7 @@
                 $no = 1;
                 foreach ($transaksi as $t) {
                 ?>
+                    <!-- Isi Data Transaksi -->    
                     <tr>
                         <th scope="row"><?= $no++; ?></th>
                         <td><?= $t['no_kk']; ?></td>
@@ -127,6 +134,7 @@
             </tbody>
         </table>
     </div>
+    <!-- Script untuk Mencetak Laporan -->
     <script>
         window.print()
     </script>

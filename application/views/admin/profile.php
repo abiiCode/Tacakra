@@ -1,14 +1,18 @@
+<!-- ======= Main Content ======= -->
 <main id="main" class="main">
 
+    <!-- Bagian Judul Halaman -->
     <div class="pagetitle">
         <h1>Profile</h1>
     </div><!-- End Page Title -->
 
+     <!-- Bagian Profil -->
     <section class="section profile">
         <div class="row">
             <?= $this->session->flashdata('pesan'); ?>
             <div class="col-xl-4">
 
+                <!-- Bagian Kartu Profil -->
                 <div class="card">
                     <div class="card-body profile-card pt-4 d-flex flex-column align-items-center">
 
@@ -19,11 +23,12 @@
 
             </div>
 
+            <!-- Bagian Detail Profil dan Edit -->
             <div class="col-xl-8">
 
                 <div class="card">
                     <div class="card-body pt-3">
-                        <!-- Bordered Tabs -->
+                        <!-- Tab Berbatas untuk Overview Profil dan Edit -->
                         <ul class="nav nav-tabs nav-tabs-bordered">
 
                             <li class="nav-item">
@@ -35,8 +40,10 @@
                             </li>
 
                         </ul>
+                        <!-- Konten Tab untuk Overview Profil dan Edit -->
                         <div class="tab-content pt-2">
 
+                            <!-- Tab Overview Profil -->
                             <div class="tab-pane fade show active profile-overview" id="profile-overview">
 
                                 <h5 class="card-title">Profile Details</h5>
@@ -53,10 +60,13 @@
 
                             </div>
 
+                            <!-- Tab Edit Profil -->
                             <div class="tab-pane fade profile-edit pt-3" id="profile-edit">
 
                                 <form method="POST" action="<?= base_url('admin/profile'); ?>">
+                                    <!-- Form Edit Profil -->
                                     <div class="row mb-3">
+                                         <!-- Input Field Tersembunyi -->
                                         <input type="hidden" name="id" value="<?= $user['id']; ?>">
                                         <input type="hidden" name="is_active" value="<?= $user['is_active']; ?>">
                                         <input type="hidden" name="password" value="<?= $user['password']; ?>">
@@ -71,6 +81,7 @@
                                         </div>
                                     </div>
 
+                                    <!-- Tombol Simpan Perubahan -->
                                     <div class="text-center">
                                         <button type="submit" class="btn btn-primary">Save Changes</button>
                                     </div>
@@ -86,6 +97,8 @@
             </div>
         </div>
     </section>
+
+    <!-- Modal untuk Mengedit Gambar Profil -->
     <div class="modal fade" id="modalEditImg" tabindex="-1">
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
@@ -93,9 +106,12 @@
                     <h5 class="modal-title">Edit Foto Profil</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
+
+                <!-- Isi Modal dengan Form Edit Gambar Profil -->
                 <form method="POST" action="<?= base_url('admin/edit_profile_img'); ?>">
                     <div class="modal-body">
                         <div class="row mb-3">
+                             <!-- Input Field Tersembunyi -->
                             <input type="hidden" name="id" value="<?= $user['id']; ?>">
                             <input type="hidden" name="is_active" value="<?= $user['is_active']; ?>">
                             <input type="hidden" name="password" value="<?= $user['password']; ?>">
@@ -108,6 +124,8 @@
                             </div>
                         </div>
                     </div>
+
+                    <!-- Footer Modal dengan Tombol Batal dan Simpan -->
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Batal</button>
                         <button type="submit" class="btn btn-primary">Save</button>
