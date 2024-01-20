@@ -16,7 +16,7 @@ class Admin extends CI_Controller
         $no_kk = $this->session->userdata('no_kk');
         // Menyiapkan data yang akan dikirim ke tampilan, Mencakup judul hall, informasi pengguna tobar, data warga, jlm warga dan transaksi yg sedang diproses
         $data = [
-            'title' => "TACAKRA-Setitik Tabungan, Jejak Keberlanjutan",
+            'title' => "Setitik Tabungan, Jejak Keberlanjutan",
             'topbar' => $this->ModelUser->cekUser(['no_kk' => $no_kk])->row_array(),
             'warga' => $this->ModelWarga->getWarga()->result_array(),
             'jmlWarga' => $this->ModelWarga->getWarga()->num_rows(),
