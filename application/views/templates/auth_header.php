@@ -2,10 +2,13 @@
 <html lang="en">
 
 <head>
+  <!-- Pengaturan karakter dan tampilan responsif -->
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
+    <!-- Judul halaman yang dinamis sesuai dengan variabel $title -->
     <title><?= $title; ?></title>
+    <!-- Deskripsi dan kata kunci untuk SEO -->
     <meta content="" name="description">
     <meta content="" name="keywords">
 
@@ -39,5 +42,6 @@
 
 <body>
 
+     <!-- Konten Utama dari Halaman Web -->
     <main>
         <div class="container">

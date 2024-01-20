@@ -2,9 +2,11 @@
 <html lang="en">
 
 <head>
+  <!-- Pengaturan karakter dan tampilan responsif -->
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
+  <!-- Judul halaman yang dinamis sesuai dengan variabel $title -->
   <title><?= $title; ?> Admin TA - CAKRA</title>
   <meta content="TA - CAKRA" name="description">
   <meta content="TA - CAKRA" name="keywords">
@@ -29,6 +31,7 @@
   <!-- Template Main CSS File -->
   <link href="<?= base_url('assets/'); ?>css/style.css" rel="stylesheet">
 
+   <!-- Informasi Tambahan tentang Template -->
   <!-- =======================================================
   * Template Name: NiceAdmin - v2.4.0
   * Template URL: https://bootstrapmade.com/nice-admin-bootstrap-admin-html-template/
@@ -40,3 +43,4 @@
 <body>
   <!-- ======= Header ======= -->
   <header id="header" class="header fixed-top d-flex align-items-center">
+  <!-- Konten header seperti navigasi, logo, dll. akan ditampilkan di sini -->

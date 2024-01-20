@@ -25,13 +25,33 @@
                                     </div>
 
                                 </div>
+                                <?php
+                                // Fungsi untuk mengurutkan data berdasarkan kompleks dan nomor urut
+                                function compareWarga($a, $b)
+                                {
+                                    $kompleksA = $a['komplek'];
+                                    $kompleksB = $b['komplek'];
+
+                                    $nomorUrutA = intval(preg_replace('/[^0-9]+/', '', $a['no_kk']), 10);
+                                    $nomorUrutB = intval(preg_replace('/[^0-9]+/', '', $b['no_kk']), 10);
+
+                                    if ($kompleksA == $kompleksB) {
+                                        return $nomorUrutA - $nomorUrutB;
+                                    }
+                                    return strcmp($kompleksA, $kompleksB);
+                                }
+
+                                // Mengurutkan array $warga dengan menggunakan fungsi compareWarga
+                                usort($warga, 'compareWarga');
+                                ?>
+
                                 <table class="table table-borderless datatable">
                                     <thead>
                                         <tr>
                                             <th scope="col" class="text-center">#</th>
                                             <th scope="col" class="text-center">Nomor KK</th>
                                             <th scope="col" class="text-center">Nama</th>
-                                            <th scope="col" class="text-center">komplek</th>
+                                            <th scope="col" class="text-center">Komplek</th>
                                             <th scope="col" class="text-center">Jenis Kelamin</th>
                                             <th scope="col" class="text-center">No Telepon</th>
                                             <th scope="col" class="text-center">Tahun Masuk</th>

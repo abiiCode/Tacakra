@@ -1,8 +1,11 @@
 <!-- ======= Footer ======= -->
+<!-- Bagian Footer yang Menampilkan Informasi Hak Cipta dan Kredit -->
 <footer id="footer" class="footer">
+    <!-- Bagian Hak Cipta -->
     <div class="copyright">
         <span>-Bersama Cakra, Wujudkan Impian Kecil Bersama-</span>
     </div>
+    <!-- Bagian Kredit dan Informasi Tambahan -->
     <div class="credits">
         <!-- All the links in the footer should remain intact. -->
         <!-- You can delete the links only if you purchased the pro version. -->
@@ -12,6 +15,8 @@
     </div>
 </footer><!-- End Footer -->
 
+<!-- Tombol Kembali ke Atas -->
+<!-- Tombol yang Mengarahkan Pengguna Kembali ke Bagian Atas Halaman -->
 <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
 <!-- Vendor JS Files -->
@@ -25,6 +30,7 @@
 <script src="<?= base_url('assets/'); ?>vendor/php-email-form/validate.js"></script>
 
 <!-- Template Main JS File -->
+<!-- Skrip Utama dari Template -->
 <script src="<?= base_url('assets/'); ?>js/main.js"></script>
 
 </body>
